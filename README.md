@@ -12,3 +12,14 @@ R/ Músicos en procesos de estudio y músicos profesionales
 
 Dividiendo en categorías por instrumentos y ofreciendo lo mejor de cada instrumento.
 Ofrecemos descuentos para estudiantes.
+
+Descripción de cada integrante:
+
+
+Páginas escogidas:
+
+1. https://lacolonial.com.co/ porque
+2.
+3.
+4.
+5.
