@@ -10,3 +10,5 @@ R/ Músicos en procesos de estudio y músicos profesionales
 
 3.¿Cómo ajustaremos nuestra oferta a ese público?
 
+Dividiendo en categorías por instrumentos y ofreciendo lo mejor de cada instrumento.
+Ofrecemos descuentos para estudiantes.
