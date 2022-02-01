@@ -15,10 +15,13 @@ Ofrecemos descuentos para estudiantes.
 
 Descripción de cada integrante:
 
+Kevin Farukh Marín Vela - Soy músico, guitarrista clásico. Tengo 24 años y soy de la ciudad de Bogotá. Me gusta la pedagogía y las matemáticas
+
+
 
 Páginas escogidas:
 
-1. https://lacolonial.com.co/ porque
+1. https://lacolonial.com.co/ porque es una empresa de instrumentos conocida en Colombia y la página cumple con los requerimientos del proyecto
 2.
 3.
 4.
