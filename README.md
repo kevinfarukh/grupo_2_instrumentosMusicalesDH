@@ -23,6 +23,8 @@ Santiago Quiroga
 
 Jainer Joel Hernández - Ingeniero electromecánico, apasionado por el diseño de software. Tengo 28 años de edad, nacido en Cali y radicado en Ibagué.
 
+Santiago Rom�n Ceferino- Soy t�cnico en sistemas, tengo 28 a�os soy de Medell�n.
+
 Páginas de referencia:
 
 1.https://lacolonial.com.co/ porque es una empresa de instrumentos conocida en Colombia y la página cumple con los requerimientos del proyecto
@@ -31,5 +33,5 @@ Páginas de referencia:
  
 3.https://tmsmusic.co/ Además de ser un e-commerce bien estructurado, presenta una página simple de entender, con diferentes opciones pero intuitivas.
 
-4.
+4.https://ortizo.com.co/ Me gusto esta pagina ya que trae una estructura muy interesante y diferente a las que usualmente se encuentran.
 5.
