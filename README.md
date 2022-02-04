@@ -1,37 +1,26 @@
-1. Â¿QuÃ© productos o servicios brindarÃ¡ nuestro sitio?
 
-R/ Venta de instrumentos musicales 
+Venta de instrumentos musicales para estudiantes y músicos profesionales, por medio de un e-commerce dividido en categorías y ofreciendo lo mejor de cada una. además, ofrecemeos descuentos especiales para estudiantes.
 
+Integrantes del proyecto:
 
-2.Â¿QuiÃ©n serÃ¡ nuestra audiencia objetivo? 
+Kevin Farukh Marín Vela - Soy músico, guitarrista clásico. Tengo 24 años y soy de la ciudad de Bogotá. Me gusta la pedagogía y las matemáticas.
 
-R/ MÃºsicos en procesos de estudio y mÃºsicos profesionales
-
-
-3.Â¿CÃ³mo ajustaremos nuestra oferta a ese pÃºblico?
-
-Dividiendo en categorÃ­as por instrumentos y ofreciendo lo mejor de cada instrumento.
-Ofrecemos descuentos para estudiantes.
-
-DescripciÃ³n de cada integrante:
-
-Kevin Farukh MarÃ­n Vela - Soy mÃºsico, guitarrista clÃ¡sico. Tengo 24 aÃ±os y soy de la ciudad de BogotÃ¡. Me gusta la pedagogÃ­a y las matemÃ¡ticas
-
-Valentina Hernandez Ramirez - Estudiante de IngenierÃ­a administrativa y bailarina. Tengo 21 aÃ±os y soy de la ciudad de Medellin. 
+Valentina Hernandez Ramirez - Estudiante de Ingeniería administrativa y bailarina. Tengo 21 años y soy de la ciudad de Medellin. 
 
 Santiago Quiroga
 
-Jainer Joel HernÃ¡ndez - Ingeniero electromecÃ¡nico, apasionado por el diseÃ±o de software. Tengo 28 aÃ±os de edad, nacido en Cali y radicado en IbaguÃ©.
+Jainer Joel Hernández - Ingeniero electromecánico, apasionado por el diseño de software. Tengo 28 años de edad, nacido en Cali y radicado en Ibagué.
 
 Santiago Román Ceferino- Soy técnico en sistemas, tengo 28 años soy de Medellín.
 
-PÃ¡ginas de referencia:
+Páginas de referencia:
 
-1.https://lacolonial.com.co/ porque es una empresa de instrumentos conocida en Colombia y la pÃ¡gina cumple con los requerimientos del proyecto
+1.https://lacolonial.com.co/ porque es una empresa de instrumentos conocida en Colombia y la página cumple con los requerimientos del proyecto
 
-2.https://tiendadelmusico.com/ La Tienda del MÃºsico cuenta con un e-commerce simple y funcional, ademÃ¡s de que estÃ¡ dirigido al pÃºblico objetivo en el que nos queremos enfocar.
+2.https://tiendadelmusico.com/ La Tienda del músico cuenta con un e-commerce simple y funcional, además de que está dirigido al público objetivo en el que nos queremos enfocar.
  
-3.https://tmsmusic.co/ AdemÃ¡s de ser un e-commerce bien estructurado, presenta una pÃ¡gina simple de entender, con diferentes opciones pero intuitivas.
+3.https://tmsmusic.co/ Además de ser un e-commerce bien estructurado, presenta una página simple de entender, con diferentes opciones pero intuitivas.
 
-4.https://ortizo.com.co/ Me gusto esta pagina ya que trae una estructura muy interesante y diferente a las que usualmente se encuentran.
+4.https://ortizo.com.co/ Me gusto esta página ya que trae una estructura muy interesante y diferente a las que usualmente se encuentran.
+
 5.
