@@ -1,0 +1,14 @@
+.imagenes{
+    width: 40%;
+    display:inline-block;
+}
+.imagen-principal{
+    width: 100%;
+}
+.imagen-secundaria{
+    width: 200px;
+}
+.detalles{
+    display: inline-block;
+    width: 50%;
+}
