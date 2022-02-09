@@ -1,0 +1,25 @@
+{
+  "name": "instrumentosmusicalesdh",
+  "version": "1.0.0",
+  "description": "1. ¿Qué productos o servicios brindará nuestro sitio?",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinfarukh/grupo_2_instrumentosMusicalesDH.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinfarukh/grupo_2_instrumentosMusicalesDH/issues"
+  },
+  "homepage": "https://github.com/kevinfarukh/grupo_2_instrumentosMusicalesDH#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
