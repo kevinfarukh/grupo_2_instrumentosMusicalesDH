@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.body-home {
+    background-color: #c3c3c3;
+}
+
+.header-home {
+    background-color: #ebebeb;
+    padding: 10px;
+    border-bottom: solid black 2px;
+}
+
+.top-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.top-bar_logo {
+    width: 20vw;
+    height: auto;
+    margin: auto;
+}
+
+.seeker {
+    order: 3;
+    width: 90vw;
+    height: 1.5rem;
+    margin-top: 15px;
+}
+.seeker_input {
+    width: 90%;
+    border-radius: 4px;
+    box-shadow: 3px 3px #0044aa;
+    border-color: #0044aa;
+    height: 100%;
+}
+
+.magnifying {
+    display: inline-block;
+    height: 100%;
+    color: #0044aa;
+}
+
+.login-menu_list {
+    list-style: none;   
+    display: none;
+    justify-content: space-around;
+}
+
+.nav-bar_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-bar {
+    display: none;
+}
+
+.hamburger-button i {
+    color: #0044aa;
+    font-size: 10vw;
+    margin-left: 15px;
+}
+
+.fa-shopping-basket {
+    color: #0044aa;
+    font-size: 10vw;
+    margin-right: 15px;
+}
