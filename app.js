@@ -18,8 +18,13 @@ app.listen(3010, ()=>{
 //vinculos de cada página
 
 app.get("/", (req, res) => 
-    res.sendFile(path.join(__dirname, "/views/index.html")))
+    res.sendFile(path.join(__dirname + "/views/index.html")))
     
 app.get("/product-detail",(req,res)=>{
     res.sendFile(path.resolve("./views/productDetail.html"))
-})
+});
+app.get("/carrito",(req,res)=>{
+    res.sendFile(path.resolve("./views/carrito.html"))
+    
+});
+
