@@ -18,12 +18,20 @@
     background-color: var(--text-color);
 }
 
+.article-link {
+    text-decoration: none;
+}
+.article-link:link, .article-link:active, .article-link:visited, .article-link:hover {
+    color: black;
+}
+
 /*Header ---------------------------------------------------------------------------------*/
 
 .header-home {
     background-color: var(--bg-color);
-    padding: 10px;
+    padding: 3vw;
     border-bottom: solid black 2px;
+    border: dashed var(--logo-color) 1px;
 }
 
 .top-bar {
@@ -120,6 +128,7 @@
 .article-box_img {
     width: 100%;
     height: 50%;
+    border: #00ADB5 dashed 1.5px;
 }
 
 .article-price {
@@ -170,6 +179,10 @@
 
 /*Tablet -----------------------------------------------------------------------------------*/
 @media (min-width: 500px) {
+
+    .header-home {
+        padding: 2.5vw;
+    }
 
     .nav-bar_list {
         display: flex;
@@ -295,11 +308,23 @@
 /*pc ------------------------------------------------------------------------------*/
 @media (min-width: 950px) {
 
+    .header-home {
+        padding: 1vw;
+    }
+
     .top-bar_logo {
         width: 10vw;
     }
     .fa-shopping-basket {
         font-size: 2vw;
+    }
+
+    .basket{
+        justify-content: end;
+    }
+
+    .login-menu {
+        justify-content: end;
     }
 
     .login-menu_list {
@@ -337,6 +362,11 @@
 
     .article-state {
         font-size: 1.5vw;
+    }
+
+    .seeker{
+        width: 48vw;
+        padding-left: 4vw;
     }
 
 }
