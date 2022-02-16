@@ -15,7 +15,8 @@
 }
 
 .body-home {
-    background-color: var(--text-color);
+    background-color: #9acfcf
+    ;
 }
 
 .article-link {
@@ -97,12 +98,12 @@
     margin: auto;
     width: 85vw;
     background-color: var(--bg-color-2);
-    border-left: solid black 2px;
-    border-right: solid black 2px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
-
+    box-shadow: 0px 5px 20px black;
 }
 
 .article-box {
@@ -204,6 +205,11 @@
         box-shadow: 3px 3px var(--shadow) var(--logo-color);
         text-align: center;
         text-shadow: 3px 3px 4px black;
+        padding: 10px;
+        background-color: var(--text-color);
+        color: var(--bg-color-2);
+        font-weight: bold;
+
     }
 
     .hamburger-button {
@@ -228,7 +234,7 @@
         display: flex;
         width: 35vw;
         order: 0;
-        height: 2rem;
+        height: 2.5rem;
         margin: auto;
     }
 

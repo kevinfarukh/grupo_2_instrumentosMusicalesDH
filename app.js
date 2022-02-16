@@ -10,9 +10,9 @@ const app = express();
 app.use(express.static(path.resolve(__dirname,"./public")));
 
 //servidor localhost:3010
-
-app.listen(3010, ()=>{
-    console.log("servidor corriendo en el puerto 3010") 
+let puerto = 3010;
+app.listen(puerto, ()=>{
+    console.log("servidor corriendo en el puerto " + puerto) 
 })
 
 //vinculos de cada página
