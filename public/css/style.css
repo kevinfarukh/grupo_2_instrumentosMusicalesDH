@@ -381,8 +381,10 @@
 /*Detalles del producto -----------------------------------------------*/
 .detalles-producto{
     display: inline-block;
-    background-color: #00ADB5;
+    background-color: #c57b0d;
+    padding: 15px;
 }
+
 .imagenes-producto{
     display: block;
 }
@@ -409,8 +411,10 @@
 }
 .descripcion-del-producto h2{
     font-size: 35px;
+    font-family: 'Open Sans';
 }
 .descripcion-del-producto p{
+    font-family: 'Open Sans';
     line-height: 20px;
     font-size: 15px;
     text-align: justify;
@@ -489,6 +493,7 @@
         justify-content: center;
         
     }
+    
     .imagenes-producto{
         display: inline-block;
         
@@ -520,7 +525,7 @@
     .descripcion-del-producto{
         display: inline-block;
         width: 40%;
-        margin: 50px 30px;
+        margin: 25px 30px;
         padding: 30px;
     }
     .descripcion-del-producto h2{
