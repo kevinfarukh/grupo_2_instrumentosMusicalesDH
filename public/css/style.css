@@ -29,7 +29,10 @@
 /*Header ---------------------------------------------------------------------------------*/
 
 .header-home {
+    position: fixed;
+    top: 0;
     background-color: var(--bg-color);
+    width: 100%;
     padding: 3vw;
     border-bottom: solid black 2px;
     border: dashed var(--logo-color) 1px;
@@ -379,9 +382,17 @@
 
 
 /*Detalles del producto -----------------------------------------------*/
+.titulo-detalle-producto{
+    margin-top: 115px;
+    padding: 25px;
+    background-color: var(--text-color) ;
+    color: var(--bg-color-2);
+    font-size: 30px;
+    text-shadow: 3px 3px 4px black;
+}
 .detalles-producto{
-    display: inline-block;
-    background-color: #c57b0d;
+    display: block;
+    background-color: var(--logo-color);
     padding: 15px;
 }
 
@@ -406,8 +417,28 @@
     display: block;
     padding: 30px;
 }
+.opcion-detalles{
+    background-color: var(--text-color);
+    border-radius: 10px;
+    color: var(--bg-color-2);
+    text-shadow: 3px 3px 4px black;
+}
+.opcion-detalles:hover{
+    border-bottom: solid 2px;
+}
+.despliegue-opciones .opcion-descripcion{
+    display: none;
+    transition: all 0.5s;
+}
+.despliegue-opciones:active .opcion-descripcion{
+    display: block;
+}
 .relleno-descripcion{
     margin: 10px;
+    padding: 10px 10px;
+}
+.precio-detalles{
+    font-size: 45px;
 }
 .descripcion-del-producto h2{
     font-size: 35px;
@@ -418,9 +449,6 @@
     line-height: 20px;
     font-size: 15px;
     text-align: justify;
-}
-.relleno-descripcion{
-    padding: 10px 0;
 }
 .cantidad-descripcion-del-producto{
     display: flex;
@@ -458,7 +486,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
 
 .barra-siguiente-instrumento a{
     color: var(--logo-color);
