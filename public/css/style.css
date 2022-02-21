@@ -99,13 +99,14 @@
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    width: 85vw;
+    width: 90vw;
     background-color: var(--bg-color-2);
     border-left: solid black 1px;
     border-right: solid black 1px;
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    padding-top: 30vw;
     box-shadow: 0px 5px 20px black;
 }
 
@@ -183,6 +184,10 @@
 
 /*Tablet -----------------------------------------------------------------------------------*/
 @media (min-width: 500px) {
+
+    .main-home {
+        padding-top: 21vw;
+    }
 
     .header-home {
         padding: 2.5vw;
@@ -317,6 +322,10 @@
 /*pc ------------------------------------------------------------------------------*/
 @media (min-width: 950px) {
 
+    .main-home {
+        padding-top: 11vw;
+    }
+    
     .header-home {
         padding: 1vw;
     }
