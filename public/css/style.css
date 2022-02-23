@@ -558,7 +558,7 @@
     display: none;
     transition: all 0.5s;
 }
-.despliegue-opciones:active .opcion-descripcion{
+.despliegue-opciones:hover .opcion-descripcion{
     display: block;
 }
 .relleno-descripcion{
