@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agregando página para usar iconos -->
+    <script src="https://kit.fontawesome.com/c323f9c180.js" crossorigin="anonymous"></script>
+    <!-- Agregando ícono -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <!-- Agregando estilo -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dh Music Store</title>
+</head>
+<body class="body-home">
+    <header class="header-home">
+        <div class="top-bar">
+            <a class="hamburger-button" href="#">
+                <i class="fas fa-bars"></i>
+            </a>
+            <a class="logo-link" href="/"><img class="top-bar_logo" src="./images/logo.svg" alt="Logo"></a>
+            <div class="seeker">
+                <input class="seeker_input" type="text">
+                <div class="magnifying">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                
+            </div>
+            <div class="login-menu">
+                <ul class="login-menu_list">
+                    <li>Ingresar</li>
+                    <li>Registrarse</li>
+                    <li><i class="far fa-user"></i></li>
+                </ul>
+            </div>
+            <div class="basket">
+                <i class="fas fa-shopping-basket"></i>
+            </div>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-bar_list">
+                <li>Guitarras</li>
+                <li>Bajos</li>
+                <li>Percuisón</li>
+                <li>Cuerdas frotadas</li>
+                <li>Micrófonos</li>
+            </ul>
+        </nav>
+    </header>
+    <form action="/register" method="POST" class="create-form">
+        <h3>Formulario de registro</h3>
+        <div class="control-form"> 
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" name="usuario" id="usuario" class="control" minlength="8" placeholder="Ingrese su nombre">
+        </div>
+        <div class="control-form"> 
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" id="email" class="control" placeholder="Ingrese su correo">
+        </div>
+        <div class="control-form" >
+            <label>Ingrese contraseña</label>
+            <input type="password" name="password" placeholder="Ingrese su contraseña" class="control">
+        </div>
+        <div class="control-form">
+            <label>Confirme contraseña</label>
+            <input type="password" name="password" class="control" placeholder="Ingrese nuevamente su contraseña">
+        </div>
+        <div class="control-form">
+            <label><input type="radio" name="perfil" value="Recibir ofertas" ><a href="#">Recibir ofertas</a></label><br>
+            <label><input type="radio" name="perfil" value="Aceptar Términos y condiciones">Aceptar <a href="#">términos y condiciones</a></label>
+            </div>
+            <button type="submit" class="button">Registrarse</button>
+        <div class="control-form">
+            <p><a href="#">¿Ya tengo Cuenta?</a></p>
+        </div>
+        </form>
