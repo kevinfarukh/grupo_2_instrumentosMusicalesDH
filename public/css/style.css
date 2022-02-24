@@ -69,16 +69,24 @@
 }
 
 .body-home {
-    background-color: #9acfcf
-    ;
+    background-color: #9acfcf;
 }
 
 .article-link {
     text-decoration: none;
 }
+
 .article-link:link, .article-link:active, .article-link:visited, .article-link:hover {
     color: black;
 }
+
+.register-link {
+    text-decoration: none;
+}
+.register-link:link, .register-link:active, .register-link:visited, .register-link:hover {
+    color: var(--logo-color)
+}
+
 
 /*Header ---------------------------------------------------------------------------------*/
 
