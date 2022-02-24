@@ -9,50 +9,119 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Carrito de Compras</title>
 </head>
-
-<body>
-    <header><header class="header-home">
-        <div class="top-bar">
-            <a class="hamburger-button" href="#">
-                <i class="fas fa-bars"></i>
-            </a>
-            <img class="top-bar_logo" src="./images/logo.svg" alt="Logo">
-            <div class="seeker">
-                <input class="seeker_input" type="text">
-                <div class="magnifying">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                
+<header class="header-home">
+    <div class="top-bar">
+        <a class="hamburger-button" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <img class="top-bar_logo" src="./images/logo.svg" alt="Logo">
+        <div class="seeker">
+            <input class="seeker_input" type="text">
+            <div class="magnifying">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="login-menu">
-                <ul class="login-menu_list">
-                    <li>Ingresar</li>
-                    <li>Registrarse</li>
-                    <li><i class="far fa-user"></i></li>
-                </ul>
-            </div>
-            <div class="basket">
-                <i class="fas fa-shopping-basket"></i>
-            </div>
+            
         </div>
-        <nav class="nav-bar">
-            <ul class="nav-bar_list">
-                <li>Guitarras</li>
-                <li>Bajos</li>
-                <li>Percusión</li>
-                <li>Cuerdas frotadas</li>
-                <li>Micrófonos</li>
+        <div class="login-menu">
+            <ul class="login-menu_list">
+                <li>Ingresar</li>
+                <li>Registrarse</li>
+                <li><i class="far fa-user"></i></li>
             </ul>
-        </nav>
-    </header></header>
-    <main class="conrainer">
-        <div>
-            <div>
-                <img src="violin" alt="./images/violin.jpg">
-            </div>
-            <div></div>
         </div>
-    <footer></footer>
+        <div class="basket">
+            <i class="fas fa-shopping-basket"></i>
+        </div>
+    </div>
+    <nav class="nav-bar">
+        <ul class="nav-bar_list">
+            <li>Guitarras</li>
+            <li>Bajos</li>
+            <li>Percusión</li>
+            <li>Cuerdas frotadas</li>
+            <li>Micrófonos</li>
+        </ul>
+    </nav>
+</header>
+<body>
+    
+    <main class="container">
+        <section>
+            <div class="carrito-fondo">
+                <h1 class="carrito-titulo">Carrito</h1>
+                
+                <div class="carrito-compras">
+                      
+                    <div class="info">
+                        <div class="segundo">
+
+                            <div><img class="acustica1" src="./images/violin.jpg" alt="violin1"></div>
+                            <div class="carrito-descripcion">WINZZ Guitarra clásica de 39 pulgadas, tamaño completo, acústica para principiantes</div>
+                            <div class="carrito-precio">
+                                <h3>Precio</h3>
+                                <div >350.000 CO</div>
+                            </div>
+                        </div>   
+                            <div>
+                                <label class="carrito-button">Cantidad
+                                <select name="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                </label>
+                            </div>
+                            
+                        <div class="carrito-eliminar">Eliminar</div>
+                        
+                            
+                    </div>
+                    <div class="carrito-total">Total</div>
+                    <br>
+                    <div class="info">
+                        <div class="segundo">
+
+                            <div><img class="acustica1" src="./images/acustica.jpg" alt="acustica1"></div>
+                            <div class="carrito-descripcion">WINZZ Guitarra clásica de 39 pulgadas, tamaño completo, acústica para principiantes</div>
+                            <div class="carrito-precio">
+                                <h3>Precio</h3>
+                                <div >350.000 CO</div>
+                            </div>
+                        </div>   
+                            <div>
+                                <label class="carrito-button">Cantidad
+                                <select name="cantidad">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                </label>
+                            </div>
+                            
+                            <div class="carrito-eliminar">Eliminar</div>
+                            
+                    </div>
+                    <div class="carrito-total">Total</div>
+                </div> 
+                 
+            </div> 
+           
+        </section>
+        
         
     </main>
 </body>

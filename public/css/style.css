@@ -181,6 +181,90 @@
     width: 100%;
     text-decoration: underline;
 }
+/*carrito de compras ----------------------------------------------------------------------------------*/  
+section{
+    
+    margin-top: 31%;
+    background-color: #dddddd;
+    
+}
+
+.carrito-titulo{
+    padding-top: 10px;
+    padding-left: 6%;
+}
+.carrito-precio{
+    display: flex;
+    padding-top: 5px;
+    padding-left: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #ffffff;
+    
+}
+.carrito-subtitle{ 
+    text-align: right;
+    margin-right: 6%; 
+    padding-right: 35px; 
+    font-weight: bold; }
+
+
+.segundo{
+    display: flex;
+}
+div.info {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 86%;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+    justify-content: space-between;
+    margin-left: 6%;
+    border-radius: 4px  ;
+}
+img.acustica1 {
+    width: 80px;
+    height: 80px;
+}
+.carrito-descripcion {
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 164px;
+    height: 110px;
+}
+.carrito-eliminar{
+    width: 58px;
+    height: 24px;
+    background-color: #303841;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px
+    
+
+}
+.carrito-button {
+    background-color: #303841;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.5seg;
+  }
+  
+.carrito-button:hover {
+    background-color: #303841e0;
+  }
+
+  .carrito-total{
+    text-align: right;
+    margin-right: 6%; 
+    padding-right: 100px; 
+    font-weight: bold; 
+  }
 
 /*Tablet -----------------------------------------------------------------------------------*/
 @media (min-width: 500px) {
@@ -317,7 +401,22 @@
     .article-state {
         font-size: 3vw;
     }
+    .carrito-descripcion{
+        font-size: 20px;
+    }
+    .carrito-precio{
+        display: flex;
+        flex-wrap:wrap ;
+        padding-left: 5px;
+
+    }
+    img.acustica1{
+        width: 200px;
+        height: 200px;
+    }
+    
 }
+
 
 /*pc ------------------------------------------------------------------------------*/
 @media (min-width: 950px) {
