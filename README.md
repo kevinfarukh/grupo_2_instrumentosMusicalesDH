@@ -24,3 +24,5 @@ P�ginas de referencia:
 4.https://ortizo.com.co/ Me gusto esta p�gina ya que trae una estructura muy interesante y diferente a las que usualmente se encuentran.
 
 5.https://www.guitarrasybaterias.com/ una pagina muy completa con una interfaz muy comoda para cualquier tipo de usuario.
+
+ Trello: https://trello.com/b/x36RcBmY/dh-music-store
