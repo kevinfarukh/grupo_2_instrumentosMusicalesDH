@@ -569,7 +569,7 @@ img.acustica1 {
 }
 .detalles-producto{
     display: block;
-    background-color: var(--logo-color);
+    background-color: #9acfcf;
     padding: 15px;
     padding-bottom: 100px;
 }
@@ -604,12 +604,13 @@ img.acustica1 {
 .opcion-detalles:hover{
     border-bottom: solid 2px;
 }
-.despliegue-opciones .opcion-descripcion{
-    display: none;
-    transition: all 0.5s;
+
+.despliegue-opciones li{
+    list-style: none
+;
 }
-.despliegue-opciones:hover .opcion-descripcion{
-    display: block;
+.despliegue-opciones summary{
+    list-style: none;
 }
 .relleno-descripcion{
     margin: 10px;
