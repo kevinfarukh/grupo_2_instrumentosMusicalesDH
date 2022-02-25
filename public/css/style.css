@@ -250,10 +250,12 @@
   width: 100%;
   text-decoration: underline;
 }
-/*carrito de compras ----------------------------------------------------------------------------------*/
-.section-carrito {
-  margin-top: 31%;
-  background-color: #dddddd;
+/*carrito de compras ----------------------------------------------------------------------------------*/  
+.section-carrito{
+    
+    padding-top: 32%;
+    background-color: #dddddd;
+    
 }
 
 .carrito-titulo {
@@ -310,13 +312,187 @@ img.acustica1 {
   border-radius: 4px;
   margin-right: 10px;
 }
+.carrito-comprar{
+    width: 58px;
+    height: 24px;
+    background-color: #303841;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px
+}
 .carrito-button {
-  background-color: #303841;
-  color: white;
-  padding: 4px 8px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.5seg;
+    background-color: #303841;
+    color: white;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.5seg;
+  }
+  
+.carrito-button:hover {
+    background-color: #303841e0;
+  }
+
+.carrito-total{
+    text-align: right;
+    margin-right: 6%; 
+    padding-right: 100px; 
+    font-weight: bold; 
+}
+
+/*Tablet -----------------------------------------------------------------------------------*/
+@media (min-width: 500px) {
+
+    .main-home {
+        padding-top: 21vw;
+    }
+
+    .header-home {
+        padding: 2.5vw;
+    }
+
+    .nav-bar_list {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 2vw;
+        color: var(--bg-color-2);
+    }
+    .nav-bar {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .nav-bar_list > li {
+        border: solid var(--text-color) 2px;
+        border-radius: 30%;
+        width: 18%;
+        box-shadow: 3px 3px var(--shadow) var(--logo-color);
+        text-align: center;
+        text-shadow: 3px 3px 4px black;
+        padding: 5px;
+        background-color: var(--text-color);
+        color: var(--bg-color-2);
+        font-weight: bold;
+        font-size: 1rem;
+
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .top-bar_logo {
+        width: 15vw;
+    }
+
+    .fa-shopping-basket {
+        color: var(--bg-color-2);
+        font-size: 2.5rem;
+        align-self: center;
+    }
+
+    .top-bar_logo {
+        margin: 0;
+    }
+
+    .seeker {
+        display: flex;
+        width: 35vw;
+        order: 0;
+        height: 2.5rem;
+        margin: auto;
+    }
+
+    .magnifying {
+        height: 100%;
+        background-color: var(--bg-color-2);
+        border-radius: 5px;
+        box-shadow: 3px 3px var(--shadow) var(--logo-color);
+    }
+
+    .seeker_input {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+    }
+    .magnifying i {
+        margin-top: 2px;
+        font-size: 2rem;
+        color:var(--text-color);
+    }
+
+    .login-menu{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 30vw;
+    }
+
+    .login-menu_list {
+        color: var(--logo-color);
+        text-shadow: 3px 3px 4px black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 25vw;
+        font-size: 2.5vw;
+        align-items: center;
+    }
+
+    .basket {
+        display: flex;
+        flex-wrap: wrap;
+        width: 8vw;
+        align-items: center;
+    }
+    .fa-shopping-basket {
+        font-size: 4vw;
+    }
+
+    .best-seller{
+        font-size: 3vw;
+    }
+
+    .article-box {
+        width: 45%;
+        height: 65vw;
+    }
+
+    .article-title {
+        font-size: 3vw;
+    }
+
+    .article-price_original {
+        font-size: 2vw;
+    }
+
+    .article-price_sale {
+        font-size: 3vw;
+    }
+
+    .article-state {
+        font-size: 3vw;
+    }
+    .carrito-descripcion{
+        font-size: 20px;
+    }
+    .carrito-precio{
+        display: flex;
+        flex-wrap:wrap ;
+        padding-left: 5px;
+
+    }
+    img.acustica1{
+        width: 200px;
+        height: 200px;
+    }
+    
 }
 
 .carrito-button:hover {
