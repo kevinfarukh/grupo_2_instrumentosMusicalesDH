@@ -252,7 +252,7 @@
 /*carrito de compras ----------------------------------------------------------------------------------*/  
 .section-carrito{
     
-    margin-top: 31%;
+    padding-top: 32%;
     background-color: #dddddd;
     
 }
@@ -314,6 +314,17 @@ img.acustica1 {
     
 
 }
+.carrito-comprar{
+    width: 58px;
+    height: 24px;
+    background-color: #303841;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px
+}
 .carrito-button {
     background-color: #303841;
     color: white;
@@ -327,12 +338,12 @@ img.acustica1 {
     background-color: #303841e0;
   }
 
-  .carrito-total{
+.carrito-total{
     text-align: right;
     margin-right: 6%; 
     padding-right: 100px; 
     font-weight: bold; 
-  }
+}
 
 /*Tablet -----------------------------------------------------------------------------------*/
 @media (min-width: 500px) {
