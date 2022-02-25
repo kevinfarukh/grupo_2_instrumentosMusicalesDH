@@ -35,7 +35,7 @@
   width: 100vw;
   background-color: var(--text-color);
   color: var(--bg-color-2);
-  border: dashed var(--logo-color) 1px;
+  background-image: linear-gradient(var(--text-color), var(--bg-color), black);
 }
 
 .submit-button {
@@ -69,7 +69,8 @@
 }
 
 .body-home {
-  background-color: var(--bg-color-3);
+  background-image: url(../images/instru.png);
+  background-color: var(--text-color);
 }
 
 .article-link {
@@ -98,7 +99,7 @@
 .header-home {
   position: fixed;
   top: 0;
-  background-image: linear-gradient(black, var(--text-color));
+  background-image: linear-gradient(black, var(--bg-color), var(--text-color));
   width: 100%;
   padding: 3vw;
 }
@@ -163,8 +164,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width: 90vw;
-
+  width: 85vw;
+  background-color: var(--bg-color-2);
   border-left: solid black 1px;
   border-right: solid black 1px;
   justify-content: space-around;
