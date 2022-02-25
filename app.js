@@ -36,4 +36,3 @@ app.get('/login', (req,res)=>{
 app.post("/",(req,res)=>{
     res.sendFile(path.resolve("./views/index.html"))
 })
-

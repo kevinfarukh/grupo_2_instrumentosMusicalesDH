@@ -592,6 +592,40 @@ img.acustica1 {
     padding: 5px;
     background-color: var(--text-color);
     color: var(--bg-color-2);
+    text-shadow: 3px 3px 4px black;
+}
+.opcion-detalles:hover{
+    border-bottom: solid 2px;
+}
+
+.despliegue-opciones li{
+    list-style: none
+;
+}
+.despliegue-opciones summary{
+    list-style: none;
+}
+.relleno-descripcion{
+    margin: 10px;
+    padding: 10px 10px;
+}
+.precio-detalles{
+    font-size: 45px;
+}
+.descripcion-del-producto h2{
+    font-size: 35px;
+    font-family: 'Open Sans';
+}
+.descripcion-del-producto p{
+    font-family: 'Open Sans';
+    line-height: 20px;
+    font-size: 15px;
+    text-align: justify;
+}
+p.relleno-descripcion.opcion-descripcion{
+    padding: 30px;
+}
+.cantidad-descripcion-del-producto{
     font-weight: bold;
     font-size: 1rem;
   }
