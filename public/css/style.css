@@ -5,6 +5,7 @@
     --logo-color: #00ADB5;
     --text-color: #3A4750;
     --bg-color-2: #EEEEEE;
+    --bg-color-3: #9acfcf;
     --shadow: 7px;
 }
 
@@ -69,7 +70,7 @@
 }
 
 .body-home {
-    background-color: #9acfcf;
+    background-color: var(--bg-color-3);
 }
 
 .article-link {
