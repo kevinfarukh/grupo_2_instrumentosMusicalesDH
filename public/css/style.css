@@ -806,6 +806,7 @@ p.relleno-descripcion.opcion-descripcion {
   align-items: center;
   background-color: #9acfcf;
   justify-content: space-evenly;
+  background-image: url("instru.png");
 }
 .ingresar-login {
   display: inline-flex;
@@ -817,7 +818,7 @@ p.relleno-descripcion.opcion-descripcion {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color);
-  padding: 15px;
+  padding: 20px;
   margin-top: 50px;
   border-radius: 3px;
 }
@@ -826,7 +827,7 @@ p.relleno-descripcion.opcion-descripcion {
   color: white;
 }
 .relleno-login {
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
   border-color: var(--logo-color);
   margin-bottom: 3px;
@@ -843,7 +844,7 @@ p.relleno-descripcion.opcion-descripcion {
   margin-top: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .boton-enviarlogin {
   background-color: blue;
