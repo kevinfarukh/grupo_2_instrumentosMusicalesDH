@@ -101,10 +101,6 @@
   background-image: linear-gradient(black, var(--text-color));
   width: 100%;
   padding: 3vw;
-<<<<<<< HEAD
-  border-bottom: solid black 2px;
-=======
->>>>>>> 24b4d2aa140b4542816173ccee1a70c6fb8f8cb5
 }
 
 .top-bar {
@@ -168,7 +164,7 @@
   flex-wrap: wrap;
   margin: auto;
   width: 90vw;
-  
+
   border-left: solid black 1px;
   border-right: solid black 1px;
   justify-content: space-around;
