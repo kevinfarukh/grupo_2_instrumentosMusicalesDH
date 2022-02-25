@@ -252,7 +252,8 @@
 /*carrito de compras ----------------------------------------------------------------------------------*/
 .section-carrito {
   padding-top: 32%;
-  background-color: #dddddd;
+  background-image: url(../images/instru.png);
+  background-color:var(--text-color);
 }
 
 .carrito-titulo {
@@ -281,12 +282,12 @@ div.info {
   background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
-  width: 86%;
+  width: 97%;
   font-size: 12px;
   text-align: left;
   padding: 10px;
   justify-content: space-between;
-  margin-left: 6%;
+  margin-left: 1%;
   border-radius: 4px;
 }
 img.acustica1 {
@@ -559,6 +560,10 @@ img.acustica1 {
   border-radius: 5px;
   align-self: center;
 }
+.section-carrito {
+  padding-top: 28%;
+  
+}
 /*Tablet -----------------------------------------------------------------------------------*/
 @media (min-width: 500px) {
   .main-home {
@@ -807,6 +812,10 @@ p.relleno-descripcion.opcion-descripcion{
   .seeker {
     width: 48vw;
     padding-left: 4vw;
+  }
+  .section-carrito {
+    padding-top: 15%;
+    
   }
 }
 
