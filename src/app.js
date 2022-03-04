@@ -5,9 +5,9 @@ const path = require("path");
 
 const app = express();
 
-//carpeta estatica public
+//carpeta estatica public y ejs
 
-app.use(express.static(path.resolve(__dirname,"./public")));
+app.use(express.static(path.resolve(__dirname,"../public")));
 app.set("views",path.join(__dirname,"./src/views"))
 app.set("view engine","ejs")
 
@@ -17,24 +17,21 @@ app.listen(puerto, ()=>{
     console.log("servidor corriendo en el puerto " + puerto) 
 })
 
+//rutas
+const mainRouter = require("./routers/mainRouter")
+
 //vinculos de cada página
 
-app.get("/", (req, res) => 
-    res.sendFile(path.join(__dirname + "/views/index.html")))
+app.get("/", mainRouter)
     
-app.get("/product-detail",(req,res)=>{
-    res.sendFile(path.resolve("./views/productDetail.html"))
-});
-app.get("/carrito",(req,res)=>{
-    res.render(path.resolve("./src/views/carrito"))
+app.get("/product-detail", mainRouter);
+
+app.get("/carrito", mainRouter);
     
-});
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
+app.get('/register',mainRouter) ;
+
+app.get('/login', mainRouter);
+
 app.post("/",(req,res)=>{
     res.sendFile(path.resolve("./views/index.html"))
 })
