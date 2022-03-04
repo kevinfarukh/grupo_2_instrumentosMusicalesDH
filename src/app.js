@@ -8,6 +8,8 @@ const app = express();
 //carpeta estatica public
 
 app.use(express.static(path.resolve(__dirname,"./public")));
+app.set("views",path.join(__dirname,"./src/views"))
+app.set("view engine","ejs")
 
 //servidor localhost:3010
 let puerto = 3010;
@@ -24,7 +26,7 @@ app.get("/product-detail",(req,res)=>{
     res.sendFile(path.resolve("./views/productDetail.html"))
 });
 app.get("/carrito",(req,res)=>{
-    res.sendFile(path.resolve("./views/carrito.html"))
+    res.render(path.resolve("./src/views/carrito"))
     
 });
 app.get('/register', (req,res)=>{
