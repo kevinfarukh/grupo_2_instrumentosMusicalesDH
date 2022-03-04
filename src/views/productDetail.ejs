@@ -1,53 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+<!--Head-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c323f9c180.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="./images/favicon.ico">
-    <!--Letra Open Sans-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <%- include("partials/head") %>
     <title>Detalles del producto</title>
-    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="body-product">
-    <header class="header-home">
-        <div class="top-bar">
-            <a class="hamburger-button" href="#">
-                <i class="fas fa-bars"></i>
-            </a>
-            <a class="logo-link" href="/"><img class="top-bar_logo" src="./images/logo.svg" alt="Logo"></a>
-            <div class="seeker">
-                <input class="seeker_input" type="text">
-                <div class="magnifying">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                
-            </div>
-            <div class="login-menu">
-                <ul class="login-menu_list">
-                    <li>Ingresar</li>
-                    <li><a class="register-link" href="register"> Registrarse</a></li>
-                    <li><i class="far fa-user"></i></li>
-                </ul>
-            </div>
-            <div class="basket">
-                <a href="carrito"><i class="fas fa-shopping-basket"></i></a>
-            </div>
-        </div>
-        <nav class="nav-bar">
-            <ul class="nav-bar_list">
-                <li>Guitarras</li>
-                <li>Bajos</li>
-                <li>Percuisón</li>
-                <li>Cuerdas frotadas</li>
-                <li>Micrófonos</li>
-            </ul>
-        </nav>
-    </header>
+    <!--Header-->
+    <%- include("partials/header") %>
     <div class="body-productdetails">
         <h2 class="titulo-detalle-producto">Guitarra</h2>
         <section class="detalles-producto">
@@ -100,30 +60,9 @@
             <h2>Ver otro instrumento</h2>
             <a href=""><i class="far fa-arrow-alt-circle-right"></i></a>
         </section>
-        <footer class="footer-home">
-            <ul class="footer_main-info">
-                <li>Envíos a nivel nacional</li>
-                <li>Chatea con nosotros <br>WhatsApp: 0000000000</li>
-                <li>Compras protegidas</li>
-            </ul>
-            <hr class="separator">
-            <ul class="footer_secondary-info">
-                <li>Categorías populares</li>
-                <hr class="vertical-separator">
-                <li><ul class="footer_extra-info-menu">
-                    <li>Formas de pago</li>
-                    <li>Nuestra tienda</li>
-                    <li>Garantía</li>
-                </ul></li>
-                <hr class="vertical-separator">
-                <li><form class="form-news" action="" methos="POST">
-                    <label for="news">Inscribirse al boletín de noticias</label>
-                    <input type="text" placeholder="Tu email" name="email" id="news">
-                    <input class="submit-button" type="submit" value="Inscribirse">
-                </form>
-                </li>
-            </ul>
-        </footer>
+        <!--footer-->
+    <%- include("./partials/footer") %>
+
         <section class="footer-product">
             <p>a</p>
         </section>
