@@ -18,20 +18,16 @@ app.listen(puerto, ()=>{
 })
 
 //rutas
-const mainRouter = require("./routers/mainRouter")
+const mainRouters = require("./routers/mainRouter")
 
 //vinculos de cada página
+app.use("/", mainRouters.index);
 
-app.get("/", mainRouter)
-    
-app.get("/product-detail", mainRouter);
+app.use("/", mainRouters.register);
 
-app.get("/carrito", mainRouter);
-    
-app.get('/register',mainRouter) ;
+app.use("/", mainRouters.carrito);
 
-app.get('/login', mainRouter);
+app.use("/", mainRouters.login);
 
-app.post("/",(req,res)=>{
-    res.sendFile(path.resolve("./views/index.html"))
-})
+app.use("/", mainRouters.productDetail);
+
