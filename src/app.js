@@ -34,8 +34,8 @@ app.use("/", mainRouters.carrito);
 
 app.use("/", mainRouters.login);
 
-app.use("/", mainRouters.productDetail);
-
 app.use("/", mainRouters.cargaGet);
 
-app.use("/", mainRouters.cargaPost);
+app.use("/", mainRouters.addProductDetail);
+
+

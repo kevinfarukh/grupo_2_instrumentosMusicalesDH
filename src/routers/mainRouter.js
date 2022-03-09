@@ -9,9 +9,9 @@ routers = {
     carrito: router.get("/carrito", mainController.carrito ),
     login: router.get("/login", mainController.login),
     productDetail: router.get("/product-detail",mainController.details),
-    anotherProductDetail: router.get("/product-detail/:id",mainController.details),
     cargaGet: router.get("/formulario",mainController.cargaGet),
-    cargaPost: router.post("/product-detail",mainController.cargaPost)
+    anotherProductDetail: router.get("/add-product-detail",mainController.anotherProductDetail),
+    addProductDetail: router.post("/add-product-detail/",mainController.addDetails),
 }
 
 

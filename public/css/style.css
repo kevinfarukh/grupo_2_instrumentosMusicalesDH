@@ -159,6 +159,11 @@
   font-size: 10vw;
   margin-right: 15px;
 }
+.fa-plus{
+  color: var(--logo-color);
+  text-shadow: 3px 3px 4px black;
+  display: none;
+}
 
 .main-home {
   display: flex;
@@ -251,16 +256,26 @@
 }
 /*carrito de compras ----------------------------------------------------------------------------------*/
 .section-carrito {
-  padding-top: 32%;
+  padding-top: 20vh;
   background-image: url(../images/instru.png);
   background-color:var(--text-color);
 }
-
+.carrito-fondo{
+  width: 90%;
+  margin: auto;
+  background-color: #c3c3c3;
+  padding: 20px;
+  box-shadow: 0px 5px 20px black;
+  
+  
+}
 .carrito-titulo {
   padding-top: 10px;
   padding-left: 6%;
   color: #fff;
+  text-shadow: 3px 3px 4px black; 
   font-size: 48px;
+  margin-bottom: 10px;
 }
 .carrito-precio {
   display: flex;
@@ -279,10 +294,13 @@
 
 .segundo {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 div.info {
   background-color: #ffffff;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   width: 97%;
   font-size: 12px;
@@ -342,6 +360,7 @@ img.acustica1 {
   padding-right: 100px;
   font-weight: bold;
   color: #fff;
+  text-shadow: 3px 3px 4px black;
   font-size: 32px;
 }
 
@@ -451,8 +470,12 @@ img.acustica1 {
     width: 8vw;
     align-items: center;
   }
+  .fa-plus{
+    display: flex;
+    font-style: 4vw;
+  }
   .fa-shopping-basket {
-    font-size: 4vw;
+    font-size: 2vw;
   }
 
   .best-seller {
@@ -767,8 +790,12 @@ p.relleno-descripcion.opcion-descripcion{
   .fa-shopping-basket {
     font-size: 2vw;
   }
-
+  .fa-plus{
+    font-size: 2vh;
+    margin-right: 20px;
+  }
   .basket {
+    display: flex;
     justify-content: end;
   }
 
@@ -851,6 +878,9 @@ p.relleno-descripcion.opcion-descripcion{
 .relleno-descripcion{
     color: white;
 }
+.despliegue-opciones summary{
+  list-style: none;
+}
 
 .imagenes-producto {
   display: block;
@@ -880,13 +910,7 @@ p.relleno-descripcion.opcion-descripcion{
 .opcion-detalles:hover {
   border-bottom: solid 2px;
 }
-.despliegue-opciones .opcion-descripcion {
-  display: none;
-  transition: all 0.5s;
-}
-.despliegue-opciones:hover .opcion-descripcion {
-  display: block;
-}
+
 .relleno-descripcion {
   margin: 10px;
   padding: 10px 10px;
@@ -1059,11 +1083,13 @@ p.relleno-descripcion.opcion-descripcion {
 .formulario-login {
   display: flex;
   flex-direction: column;
+  width: 350px;
   background-color: var(--bg-color);
   padding: 20px;
   margin-top: 5vw;
   border-radius: 3px;
   box-shadow: 7px 13px 37px #000;
+  
 }
 .formulario-login label {
   padding: 10px;
@@ -1167,5 +1193,46 @@ p.relleno-descripcion.opcion-descripcion {
 /*formulario-carga------------------------------------*/
 
 .formulario-carga{
-  margin-top: 30vh;
+  box-shadow: 7px 13px 37px #000;
+  background-color:var(--bg-color);
+  color: #fff;
+  width: 320px;
+  margin: 20vh auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.formulario-carga h1{
+  padding: 20px;
+  font-size: 20px;
+}
+.formulario-carga label{
+  display: block;
+  padding: 15px;
+}
+.formulario-carga label input{
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color:var(--bg-color);
+  border: var(--logo-color) 1px solid;
+  color: white;
+}
+.formulario-carga label textarea{
+  display: block;
+  background-color:var(--bg-color);
+  width: 100%;
+  border: var(--logo-color) 1px solid;
+  color: white;
+}
+.btn-enviar-carga{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-enviar-carga input{
+  padding: 10px 25px;
+  border: none;
+  background-color: #1f53c5;
+  color: #fff;
+  border-radius: 10px;
 }
