@@ -16,6 +16,19 @@ const mainController = {
     },
     details: (req,res)=>{
         res.render(path.resolve(__dirname, "../views/productDetail"))
+    },
+    cargaGet: (req,res)=>{
+        let instrumento={
+            nombre: "piano",
+        }
+        res.render(path.resolve(__dirname,"../views/formularioDeCarga"))
+    },
+    cargaPost: (req,res)=>{
+        let productos = {
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion,
+        }
+        res.render(path.resolve(__dirname, "../views/productDetail"), {productos: productos})
     }
 
 }

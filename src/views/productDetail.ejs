@@ -9,7 +9,7 @@
     <!--Header-->
     <%- include("partials/header") %>
     <div class="body-productdetails">
-        <h2 class="titulo-detalle-producto">Guitarra</h2>
+        <h2 class="titulo-detalle-producto"></h2>
         <section class="detalles-producto">
             <section class ="imagenes-producto">
                 <img class ="imagen-principal" src="./images/Guitarra1.jpeg" alt="">
@@ -52,6 +52,10 @@
                     <button class="boton-añadir">Añadir al carrito</button>
                 </div>
             </section>
+            <ul>
+                <li><%= productos.nombre %></li>
+                <li><%= productos.descripcion %></li>
+            </ul>
         </section>
         
     </div>
@@ -66,6 +70,7 @@
         <section class="footer-product">
             <p>a</p>
         </section>
+        
     
 </body>
 </html>

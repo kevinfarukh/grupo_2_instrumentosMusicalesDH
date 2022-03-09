@@ -11,6 +11,11 @@ app.use(express.static(path.resolve(__dirname,"../public")));
 app.set("views",path.join(__dirname,"./src/views"))
 app.set("view engine","ejs")
 
+//archivos Json para post
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
+
 //servidor localhost:3010
 let puerto = 3010;
 app.listen(puerto, ()=>{
@@ -31,3 +36,6 @@ app.use("/", mainRouters.login);
 
 app.use("/", mainRouters.productDetail);
 
+app.use("/", mainRouters.cargaGet);
+
+app.use("/", mainRouters.cargaPost);

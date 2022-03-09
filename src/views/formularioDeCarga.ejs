@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head") %>
+    <title>Document</title>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <div class="formulario-carga">
+        <form action="/product-detail" method="POST">
+            <label for="name">
+                Nombre del producto
+                <input type="text" id="name" name="nombre">
+            </label>
+            <label for="">
+                Descripción
+                <textarea name="descripcion"></textarea>
+            </label>
+            Imagen
+            <input type="file">
+            <label for="">
+                Categoria
+                <select name="categoria" id="">
+                    <option value="">Guitarra</option>
+                    <option value="">Piano</option>
+                </select>
+            </label>
+            <label for="">
+                Color
+                <input name="color" type="color">
+            </label>
+            <label for="">
+                Precio
+                <input name="precio" type="number">
+            </label>
+            <input type="submit" name="Enviar" id="">
+        </form>
+    </div>
+</body>
+</html>
