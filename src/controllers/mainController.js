@@ -1,39 +1,85 @@
+const fs = require('fs');
 const path = require("path")
+
+const productsFilePath = path.join(__dirname, '../data/productsData.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const usersFilePath = path.join(__dirname, '../data/usersData.json');
+const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
 
     index: (req, res) => {
-    res.render(path.resolve(__dirname, "../views/index"))
+    res.render("index", {products})
     },
 
     register:(req,res)=>{
-        res.render(path.resolve(__dirname,"../views/register"))
+        res.render("register")
     },
     login:(req,res)=>{
-        res.render(path.resolve(__dirname, '../views/login'));
+        res.render("login");
     },
     carrito:(req,res)=>{
-        res.render(path.resolve(__dirname,"../views/carrito"))
+        res.render("carrito");
     },
     details: (req,res)=>{
-        res.render(path.resolve(__dirname, "../views/productDetail"))
+        let id = req.params.id
+        let product = products.find(i => i.id == id);
+        res.render("productDetail",{product})
     },
     
     cargaGet: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views/formularioDeCarga"))
+        res.render("formularioDeCarga");
     },
     anotherProductDetail: (req,res)=>{
-        res.render(path.resolve(__dirname,"../views/addProductDetail"))
+        res.render("addProductDetail");
     },
     addDetails: (req,res)=>{
-        productos = {
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
-            caracteristicas: req.body.caracteristicas,
-            precio: req.body.precio,
-            imagen: req.body.imagen
+        let newProduct = {
+            id: Date.now(),
+            productName: req.body.productName,
+            price: req.body.price,
+            description: req.body.description,
+            characteristics: req.body.characteristics,
+            discount: req.body.discount,
+            img: req.body.img
         }
-        res.render(path.resolve(__dirname, "../views/addProductDetail"), {productos: productos})
+        products.unshift(newProduct)
+
+        let productsJSON=JSON.stringify(products);
+
+		fs.writeFileSync(productsFilePath, productsJSON);
+		
+		res.redirect('/')
+    },
+    edit:(req,res)=>{
+        let id = req.params.id
+        let product = products.find(i => i.id == id);
+        res.render("formularioDeEdicion",{product})
+    },
+    update:(req,res) =>{
+        let id = req.params.id;
+        let productEdited = products.find(i => i.id == id);
+        productEdited.productName = req.body.productName;
+        productEdited.price = req.body.price;
+        productEdited.description = req.body.description;
+        productEdited.characteristics = req.body.characteristics;
+        productEdited.discount = req.body.discount;
+
+        let productsJSON=JSON.stringify(products);
+
+		fs.writeFileSync(productsFilePath, productsJSON);
+		
+		res.redirect('/product-detail/' + id)
+    },
+    destroy: (req,res)=>{
+        let id = req.params.id
+        let productoEliminado = products.filter(i => i.id != id);
+        let productsJSON=JSON.stringify(productoEliminado);
+
+		fs.writeFileSync(productsFilePath, productsJSON);
+		
+		res.redirect('/')
     }
 
 }

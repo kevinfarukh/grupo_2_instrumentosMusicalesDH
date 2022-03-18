@@ -2,14 +2,18 @@
 
 const express = require("express");
 const path = require("path");
+const methodOverride =  require('method-override');
 
 const app = express();
 
 //carpeta estatica public y ejs
 
 app.use(express.static(path.resolve(__dirname,"../public")));
-app.set("views",path.join(__dirname,"./src/views"))
+app.set('views', path.join(__dirname, '/views'));
 app.set("view engine","ejs")
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 //archivos Json para post
 
@@ -26,16 +30,8 @@ app.listen(puerto, ()=>{
 const mainRouters = require("./routers/mainRouter")
 
 //vinculos de cada página
-app.use("/", mainRouters.index);
+app.use("/", mainRouters);
 
-app.use("/", mainRouters.register);
 
-app.use("/", mainRouters.carrito);
-
-app.use("/", mainRouters.login);
-
-app.use("/", mainRouters.cargaGet);
-
-app.use("/", mainRouters.addProductDetail);
 
 

@@ -12,19 +12,20 @@
 
     <main class="main-home">
         <h2 class="best-seller">Lo más vendido</h2>
+        <% for (let i=0; i < products.length; i++){%>
         <div class="article-box">
-            <a class="article-link" href="product-detail">
+            <a class="article-link" href="product-detail/<%=products[i].id%>">
             <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
             <div class="article-box_description">
                 <h3 class="article-title">
-                    Guitarra de prueba # 1
+                    <%= products[i].productName%>
                 </h3>
                 <div class="article-price">
                     <p class="article-price_sale">
-                        650.000 cop
+                        $<%=products[i].price - (products[i].price * products[i].discount / 100)%>
                     </p>
                     <p class="article-price_original">
-                        800.000 cop
+                        $<%=products[i].price%>
                     </p>
                 </div>
                 <p class="article-state">
@@ -33,93 +34,15 @@
             </div>
             </a>
         </div>
+        <% } %>
 
 
-        <div class="article-box">
-            <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
-            <div class="article-box_description">
-                <h3 class="article-title">
-                    Guitarra de prueba # 1
-                </h3>
-                <div class="article-price">
-                    <p class="article-price_sale">
-                        200.000 cop
-                    </p>
-                    <p class="article-price_original">
-                        250.000 cop
-                    </p>
-                </div>
-                <p class="article-state">
-                    Disponible
-                </p>
-            </div>
-        </div>
-
-        <div class="article-box">
-            <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
-            <div class="article-box_description">
-                <h3 class="article-title">
-                    Guitarra de prueba # 1
-                </h3>
-                <div class="article-price">
-                    <p class="article-price_sale">
-                        200.000 cop
-                    </p>
-                    <p class="article-price_original">
-                        250.000 cop
-                    </p>
-                </div>
-                <p class="article-state">
-                    Disponible
-                </p>
-            </div>
-        </div>
-
-
-        <div class="article-box">
-            <img class="article-box_img" src="./images/guitarra2.jpeg" alt="article">
-            <div class="article-box_description">
-                <h3 class="article-title">
-                    Guitarra de prueba # 2
-                </h3>
-                <div class="article-price">
-                    <p class="article-price_sale">
-                        280.000 cop
-                    </p>
-                    <p class="article-price_original">
-                        300.000 cop
-                    </p>
-                </div>
-                <p class="article-state">
-                    Disponible
-                </p>
-            </div>
-        </div>
-
-        <div class="article-box">
-            <img class="article-box_img" src="./images/guitarra3.jpeg" alt="article">
-            <div class="article-box_description">
-                <h3 class="article-title">
-                    Guitarra de prueba # 3
-                </h3>
-                <div class="article-price">
-                    <p class="article-price_sale">
-                        280.000 cop
-                    </p>
-                    <p class="article-price_original">
-                        300.000 cop
-                    </p>
-                </div>
-                <p class="article-state">
-                    Disponible
-                </p>
-            </div>
-        </div>
+        
 
         <h2 class="best-seller">Mejores promociones</h2>
-
+        
         <div class="article-box">
-            <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
+            <img class="article-box_img" src="./images/<guitarra1.jpeg>" alt="article">
             <div class="article-box_description">
                 <h3 class="article-title">
                     Guitarra de prueba # 1
@@ -137,6 +60,7 @@
                 </p>
             </div>
         </div>
+        
 
         <div class="article-box">
             <img class="article-box_img" src="./images/guitarra2.jpeg" alt="article">

@@ -9,7 +9,7 @@
     <!--Header-->
     <%- include("partials/header") %>
     <div class="body-productdetails">
-        <h2 class="titulo-detalle-producto">Guitarra</h2>
+        <h2 class="titulo-detalle-producto"><%=product.productName%></h2>
         <section class="detalles-producto">
             <section class ="imagenes-producto">
                 <img class ="imagen-principal" src="./images/Guitarra1.jpeg" alt="">
@@ -19,14 +19,14 @@
                 </div>
             </section>
             <section class ="descripcion-del-producto">
-                <h3 class="relleno-descripcion precio-detalles">$650.000</h3>
+                <h3 class="relleno-descripcion precio-detalles"><%=product.price%></h3>
                 <div class="despliegue-opciones">
                     <details>
                         <summary>
                             <h3 class="relleno-descripcion opcion-detalles">Descripción <i class="fa-solid fa-arrow-down"></i></h3>
                         </summary>
                         <ul>
-                            <li><p class="relleno-descripcion opcion-descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit reiciendis alias impedit accusantium repellat officia! Minus perferendis velit quas cumque voluptatibus libero dolore, ducimus eius veritatis, nam, distinctio quidem nihil! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae in dolorum magnam blanditiis accusantium earum doloribus tenetur nostrum harum numquam nulla deserunt nam facilis dignissimos enim, obcaecati voluptates voluptatum nobis.</p></li>
+                            <li><p class="relleno-descripcion opcion-descripcion"><%= product.description%> </p></li>
                         </ul>
                     </details>
                 </div>
@@ -36,11 +36,7 @@
                             <h3 class="relleno-descripcion opcion-detalles">Caracteristicas <i class="fa-solid fa-arrow-down"></i></h3>
                         </summary>  
                         <ul class="relleno-descripcion opcion-descripcion">
-                            <li>Madera: Pino</li>
-                            <li>Cuerdas: Savarez</li>
-                            <li>Tamaño: 1m</li>
-                            <li>Cuerpo: clasico</li>
-                            <li>Puente: Palisandro</li>
+                            <li><%=product.characteristics%></li>
                         </ul>
                     </details>
                 </div>
@@ -51,6 +47,12 @@
                 <div class="div-boton-añadir">
                     <button class="boton-añadir">Añadir al carrito</button>
                 </div>
+                <form action="/product-detail/<%= product.id%>?_method=PUT" method="POST">
+                    <button><a href="/product-detail/<%= product.id%>/edit"> Editar</a></button>
+                </form>
+                <form action="/product-detail/<%= product.id%>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
             </section>
         </section>
         

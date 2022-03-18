@@ -8,27 +8,27 @@
     <%- include("partials/header") %>
     
     <div class="formulario-carga">
-        <h1>Formulario de carga</h1>
-        <form action="/product-detail" method="POST">
+        <h1>Formulario de edición</h1>
+        <form action="/product-detail/<%=product.id%>?_method=PUT" method="POST">
             <label for="name">
                 Nombre del producto
-                <input type="text" id="name" name="productName">
+                <input type="text" id="name" value="<%=product.productName%>" name="productName">
             </label>
             <label for="">
                 Descripción
-                <textarea name="description"></textarea>
+                <textarea name="description"><%=product.description%></textarea>
             </label>
             <label for="">
                 Caracteristicas
-                <textarea name="characteristics"></textarea>
+                <textarea name="characteristics"><%=product.characteristics%></textarea>
             </label>
             <label for="">
                 Precio
-                <input name="price" type="number">
+                <input value="<%=product.price%>" name="price" type="number">
             </label>
             <label for="">
                 Descuento
-                <input name="discount" type="number">
+                <input value="<%=product.discount%>" name="discount" type="number">
             </label>
             <label for="">
                 Categoria
@@ -39,10 +39,6 @@
                     <option value="cuerdas-frotadas">Cuerdas Frotadas</option>
                     <option value="microfonos">Microfonos</option>
                 </select>
-            </label>
-            <label for="">
-                Imagen
-            <input name="img" type="file">
             </label>
             <div class="btn-enviar-carga">
                 <input type="submit" name="Enviar" id="">
