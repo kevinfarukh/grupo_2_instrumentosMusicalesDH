@@ -1,8 +1,23 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
+const multer = require("multer");
+const path = require("path")
+const mainController = require("../controllers/mainController");
 
-const mainController = require("../controllers/mainController")
+// para subir imagenes ******
 
+let storage = multer.diskStorage({
+    destination: function (req, file, cb){
+        cb(null, "./public/images");
+    },
+    filename: function(req,file,cb){
+        cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`)
+    }
+})
+let upload = multer({ storage })
+
+
+ // enrutamiento *************
 
 router.get("/", mainController.index);
 router.get("/create",mainController.cargaGet);
@@ -21,7 +36,7 @@ router.get("/create",mainController.cargaGet);
 
 
 router.get("/add-product-detail",mainController.anotherProductDetail);
-router.post("/product-detail",mainController.addDetails);
+router.post("/product-detail",upload.single("img"), mainController.addDetails);
 
 router.get("/product-detail/:id/edit", mainController.edit)
 router.put("/product-detail/:id", mainController.update)

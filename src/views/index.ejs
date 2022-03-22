@@ -15,7 +15,7 @@
         <% for (let i=0; i < products.length; i++){%>
         <div class="article-box">
             <a class="article-link" href="product-detail/<%=products[i].id%>">
-            <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
+            <img class="article-box_img" src="./images/<%=products[i].img%>" alt="article">
             <div class="article-box_description">
                 <h3 class="article-title">
                     <%= products[i].productName%>
@@ -42,7 +42,7 @@
         <h2 class="best-seller">Mejores promociones</h2>
         
         <div class="article-box">
-            <img class="article-box_img" src="./images/<guitarra1.jpeg>" alt="article">
+            <img class="article-box_img" src="./images/guitarra1.jpeg" alt="article">
             <div class="article-box_description">
                 <h3 class="article-title">
                     Guitarra de prueba # 1

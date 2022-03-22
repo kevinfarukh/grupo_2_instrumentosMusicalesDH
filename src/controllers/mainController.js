@@ -35,6 +35,7 @@ const mainController = {
         res.render("addProductDetail");
     },
     addDetails: (req,res)=>{
+    
         let newProduct = {
             id: Date.now(),
             productName: req.body.productName,
@@ -42,7 +43,7 @@ const mainController = {
             description: req.body.description,
             characteristics: req.body.characteristics,
             discount: req.body.discount,
-            img: req.body.img
+            img: req.file.filename
         }
         products.unshift(newProduct)
 

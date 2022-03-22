@@ -955,6 +955,35 @@ p.relleno-descripcion.opcion-descripcion {
   background-color: #303841;
   color: white;
 }
+.btn-editar{
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #303841;
+  color: white;
+  
+}
+.btn-editar a{
+  text-decoration: none;
+  color: white;
+}
+.btn-eliminar{
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #303841;
+  color: white;
+}
+.btn-eliminar{
+  text-decoration: none;
+  color: white;
+}
+.btn-eliminar-editar{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-top: 50px;
+}
 .boton-añadir:hover {
   color: #ddd;
 }
@@ -1065,6 +1094,7 @@ p.relleno-descripcion.opcion-descripcion {
   .footer-product{
     padding: 25px;
 }
+
 }
 /*LOGIN-----------------------------------------------------------------------------------------*/
 .body-login {

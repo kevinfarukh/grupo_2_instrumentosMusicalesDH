@@ -12,14 +12,13 @@
         <h2 class="titulo-detalle-producto"><%=product.productName%></h2>
         <section class="detalles-producto">
             <section class ="imagenes-producto">
-                <img class ="imagen-principal" src="./images/Guitarra1.jpeg" alt="">
+                <img class ="imagen-principal" src="/images/<%=product.img%>" alt="">
                 <div class="imagenes-secundarias">
-                    <img class ="imagen-secundaria imagen-secundaria-1" src="./images/guitarra2.jpeg" alt="">
-                    <img class ="imagen-secundaria" src="./images/guitarra3.jpeg" alt="">
+                    
                 </div>
             </section>
             <section class ="descripcion-del-producto">
-                <h3 class="relleno-descripcion precio-detalles"><%=product.price%></h3>
+                <h3 class="relleno-descripcion precio-detalles">$<%=product.price%></h3>
                 <div class="despliegue-opciones">
                     <details>
                         <summary>
@@ -47,12 +46,14 @@
                 <div class="div-boton-añadir">
                     <button class="boton-añadir">Añadir al carrito</button>
                 </div>
-                <form action="/product-detail/<%= product.id%>?_method=PUT" method="POST">
-                    <button><a href="/product-detail/<%= product.id%>/edit"> Editar</a></button>
-                </form>
-                <form action="/product-detail/<%= product.id%>?_method=DELETE" method="POST">
-                    <button type="submit">Eliminar</button>
-                </form>
+                <div class="btn-eliminar-editar">
+                    <form action="/product-detail/<%= product.id%>?_method=PUT" method="POST">
+                        <button class="btn-editar"><a href="/product-detail/<%= product.id%>/edit"> Editar</a></button>
+                    </form>
+                    <form action="/product-detail/<%= product.id%>?_method=DELETE" method="POST">
+                        <button class="btn-eliminar" type="submit">Eliminar</button>
+                    </form>
+                </div>
             </section>
         </section>
         
