@@ -18,7 +18,7 @@
                 </div>
             </section>
             <section class ="descripcion-del-producto">
-                <h3 class="relleno-descripcion precio-detalles">$<%=product.price%></h3>
+                <h3 class="relleno-descripcion precio-detalles">$<%=product.price - (product.price * product.discount / 100)%><p>$<%=product.price%></p></h3>
                 <div class="despliegue-opciones">
                     <details>
                         <summary>
@@ -44,7 +44,7 @@
                     <input class="cantidad-añadir" name="cantidad" id="cantidad"type="number">
                 </div>
                 <div class="div-boton-añadir">
-                    <button class="boton-añadir">Añadir al carrito</button>
+                    <a href="/carrito"><button class="boton-añadir">Añadir al carrito</button></a>
                 </div>
                 <div class="btn-eliminar-editar">
                     <form action="/product-detail/<%= product.id%>?_method=PUT" method="POST">
@@ -58,11 +58,15 @@
         </section>
         
     </div>
+    <% for (let i=0; i < products.length; i++){
+        if(products[i].id != id){
+            let otro = i++;%>
         <section class="barra-siguiente-instrumento">
-            <a href=""><i class="far fa-arrow-alt-circle-left"></i></a>
+            <a href="/product-detail/<%=products[otro].id%>"><i class="far fa-arrow-alt-circle-left"></i></a>
             <h2>Ver otro instrumento</h2>
-            <a href=""><i class="far fa-arrow-alt-circle-right"></i></a>
+            <a href="/product-detail/<%=products[otro].id%>"><i class="far fa-arrow-alt-circle-right"></i></a>
         </section>
+        <% }} %>
         <!--footer-->
     <%- include("./partials/footer") %>
 

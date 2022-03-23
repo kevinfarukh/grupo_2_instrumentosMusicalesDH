@@ -25,7 +25,7 @@ const mainController = {
     details: (req,res)=>{
         let id = req.params.id
         let product = products.find(i => i.id == id);
-        res.render("productDetail",{product})
+        res.render("productDetail",{product, products, id})
     },
     
     cargaGet: (req,res)=>{
