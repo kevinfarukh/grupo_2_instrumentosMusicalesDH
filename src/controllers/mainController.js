@@ -10,7 +10,17 @@ const users = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const mainController = {
 
     index: (req, res) => {
-    res.render("index", {products})
+        let resultado = []
+       if(req.query.search){
+           for(let i = 0; i < products.length; i++){
+               if(products[i].productName.toLowerCase().includes(req.query.search.toLowerCase())){
+                   resultado.push(products[i])
+               }
+           }
+       }else{
+           resultado = products
+       }
+    res.render("index", {products : resultado})
     },
 
     register:(req,res)=>{

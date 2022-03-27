@@ -122,6 +122,10 @@
   height: 1.5rem;
   margin-top: 15px;
 }
+.seeker-form{
+  display: flex;
+  width: 90%;
+}
 .seeker_input {
   width: 90%;
   border-radius: 4px;
