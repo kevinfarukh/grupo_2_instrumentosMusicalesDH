@@ -34,7 +34,6 @@ router.get("/login", mainController.login);
 router.get("/create",mainController.cargaGet);
 
 
-router.get("/add-product-detail",mainController.anotherProductDetail);
 router.post("/product-detail",upload.single("img"), mainController.addDetails);
 
 router.get("/product-detail/:id/edit", mainController.edit)

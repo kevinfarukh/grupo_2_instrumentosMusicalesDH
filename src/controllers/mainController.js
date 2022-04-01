@@ -41,9 +41,6 @@ const mainController = {
     cargaGet: (req,res)=>{
         res.render("formularioDeCarga");
     },
-    anotherProductDetail: (req,res)=>{
-        res.render("addProductDetail");
-    },
     addDetails: (req,res)=>{
     
         let newProduct = {
