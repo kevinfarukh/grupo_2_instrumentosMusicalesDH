@@ -1,8 +1,1 @@
-[
-    {
-        "id":"1",
-        "userName":"Juan",
-        "email":"juan@gmail.com",
-        "password":"asdf1234"
-    }
-]
+[{"id":"1","userName":"Juan","email":"juan@gmail.com","password":"asdf1234","img":null},{"id":1648783735938,"userName":"asdf","email":"asdfa@gmail.com","password":"1234","img":null},{"id":1648784090419,"userName":"kevin","email":"Kevinfarukh@gmail.com","password":"asdf","img":"1648784090409_img_.jpg"},{"id":1648784272610,"userName":"kevinf","email":"Kevinfarukh@gmail.com","password":"$2a$10$j6rKtYBuLxdhhnFUE62GEOsqFVeDBhYlwgIdTWTsSfTPXRu203hzu","img":"1648784272600_img_.jpg"}]

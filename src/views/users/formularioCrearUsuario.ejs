@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head") %>
+    <title>Document</title>
+</head>
+<body class="body-home">
+    <%- include("../partials/header") %>
+    
+    <div class="formulario-carga">
+        <h1>Formulario de carga</h1>
+        <form action="/user/create" method="POST" enctype="multipart/form-data">
+            <label for="name">
+                Usuario
+                <input type="text" id="name" name="userName">
+            </label>
+            <label for="email">
+                Email
+                <input type="email" id="email" name="email">
+            </label>
+            <label for="password">
+                Contraseña
+                <input type="password" id="password" name="password">
+            </label>
+            <label for="">
+                Imagen
+            <input name="img" type="file">
+            </label>
+            <div class="btn-enviar-carga">
+                <input type="submit" name="Enviar" id="">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
