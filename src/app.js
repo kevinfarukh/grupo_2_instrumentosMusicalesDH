@@ -26,9 +26,11 @@ app.listen(puerto, ()=>{
 
 //rutas
 const mainRouters = require("./routers/mainRouter")
+const userRouters = require('./routers/usersRouter')
 
 //vinculos de cada página
 app.use("/", mainRouters);
+app.use("/user", userRouters);
 
 
 
