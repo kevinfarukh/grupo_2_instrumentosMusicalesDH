@@ -14,11 +14,16 @@ let storage = multer.diskStorage({
 })
 let upload = multer({ storage })
 
+//middleware
+const validation = require("../middlewares/validator");
+
 router.get("/", userController.index)
 
 //creación
 router.get("/create",userController.create);
 router.post("/create",upload.single("img"),userController.createPost);
 
+router.get("/login", userController.login)
+router.post("/login", validation , userController.loginProcess)
 module.exports = router
 

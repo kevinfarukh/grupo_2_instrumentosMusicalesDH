@@ -11,16 +11,18 @@
     <%- include("partials/header") %>
     <div class="todo-login">
     <!--<img class="imagen-login" src="./images/instru.png" alt="instrumentos">-->
-    <form class="formulario-login" action="https://formsubmit.co/santiagoq2326@gmail.com" method="post">
+    <form class="formulario-login" action="/user/login" method="POST">
         <h2 class="ingresar-login"><b>Ingresar</b></h2><br>
-        <label for="usuario">Usuario:</label>
-        <input class="relleno-login" type="email" name="usuario" id="usuario" placeholder="Ingrese su email" required>
+        <label for="usuario">Correo:</label>
+        <input class="relleno-login" type="email" name="email" id="usuario" placeholder="Ingrese su email">
+        <% if(locals.errors && errors.email){ %>
+            <p style="color:aqua"><%=errors.email.msg%></p>
+        <% } %>
         <label for="contraseña">Contraseña:</label>
-        <input class="relleno-login" type="password" name="password" id="contraseña" placeholder="Ingrese su contraseña" required>
-        <label for="tyc">
-            <input type="checkbox" id="tyc" required>
-            ¿Aceptas terminos y condiciones?
-        </label>
+        <input class="relleno-login" type="password" name="password" id="contraseña" placeholder="Ingrese su contraseña">
+        <% if(locals.errors && errors.password){ %>
+            <p style="color:aqua"><%=errors.password.msg%></p>
+        <% } %>
         <input class=" boton-enviarlogin" type="submit" >
         <input class=" boton-enviarlogin" type="reset">
         <a class="olvide-login" href="pruebaHola.html" target="_blank">Olvide mi contraseña</a>

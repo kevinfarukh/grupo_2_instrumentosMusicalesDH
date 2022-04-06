@@ -3,6 +3,7 @@ const path = require("path")
 const bcrypt = require("bcryptjs")
 const usersFilePath = path.join(__dirname, '../data/usersData.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const { validationResult } = require("express-validator");
 
 const userController = {
     index:(req, res) =>{
@@ -28,6 +29,43 @@ const userController = {
 		
         //redirigir
         res.redirect("/")
+    },
+    login: (req, res) => {
+        res.render("login")
+    },
+    loginProcess: (req, res) => {
+        const results = validationResult(req);
+        if (results.errors.length > 0) {
+            res.render("login", {
+                errors: results.mapped()
+            });
+        }else {
+            let userToLog = users.find(email => email.email === req.body.email);
+            if (userToLog) {
+                let samePassword = bcrypt.compareSync(req.body.password, userToLog.password);
+                if (samePassword) {
+                    //delete userToLog.password;
+                    //req.session.userLogueado = userToLog;
+                    res.redirect("/");
+                } else {
+                    res.render("login", {
+                        errors: {
+                            password: {
+                                msg: "Contraseña incorrecta"
+                            }
+                        }
+                    });
+                }
+            }else{
+                res.render("login", {
+                    errors: {
+                        email: {
+                            msg: "No se encuentra el email"
+                        }
+                    }
+                });
+            }
+        }
     }
 }
 
