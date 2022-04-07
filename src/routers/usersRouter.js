@@ -12,18 +12,25 @@ let storage = multer.diskStorage({
         cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`)
     }
 })
-let upload = multer({ storage })
 
 //middleware
+const upload = multer({ storage })
 const validation = require("../middlewares/validator");
+const usuarioLogueado = require("../middlewares/usuarioLogueado");
+const usuarioNoLogueado = require("../middlewares/usuarioNoLogueado");
+//profile
+router.get("/", usuarioNoLogueado,userController.index)
 
-router.get("/", userController.index)
-
-//creación
-router.get("/create",userController.create);
+//creación de usuario
+router.get("/create",usuarioLogueado, userController.create);
 router.post("/create",upload.single("img"),userController.createPost);
 
-router.get("/login", userController.login)
+//login
+router.get("/login", usuarioLogueado, userController.login)
 router.post("/login", validation , userController.loginProcess)
+
+//logout
+router.get("/logout", userController.logout)
+
 module.exports = router
 

@@ -87,6 +87,17 @@
 .register-link {
   text-decoration: none;
 }
+.profile-link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-link img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
 .register-link:link,
 .register-link:active,
 .register-link:visited,
@@ -1276,4 +1287,36 @@ p.relleno-descripcion.opcion-descripcion {
   background-color: #1f53c5;
   color: #fff;
   border-radius: 10px;
+}
+/*User-profile-----------------------------------------*/
+
+.userName{
+  width: 400px;
+  height: 400px;
+  margin: 150px auto;
+
+  padding: 30px;
+  background-color: var(--bg-color);
+}
+.userName img{
+  width: 200px;
+  display: block;
+  margin: 10px auto;
+}
+.userName h1{
+  color : var(--logo-color);
+  text-align: center;
+}
+.userName div a{
+  color: var(--logo-color);
+  text-decoration: none;
+}
+.btn-logout{
+  margin: auto;
+  padding: 20px;
+  background-color: #1f53c5;
+  border: 1px solid black;
+  height: 40px;
+  width: 100px;
+
 }

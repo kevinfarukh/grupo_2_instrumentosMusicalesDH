@@ -7,9 +7,12 @@ const { validationResult } = require("express-validator");
 
 const userController = {
     index:(req, res) =>{
-        res.send("user")
+        res.render("users/user", {
+            user: req.session.userLogged
+        })
     },
     create:(req,res)=>{
+        res.cookie("userLogged", "hola", {maxAge: 1000 * 30})
         res.render("users/formularioCrearUsuario")
     },
     createPost:(req,res)=>{
@@ -32,6 +35,7 @@ const userController = {
     },
     login: (req, res) => {
         res.render("login")
+        console.log(req.cookies.userLogged)
     },
     loginProcess: (req, res) => {
         const results = validationResult(req);
@@ -44,9 +48,9 @@ const userController = {
             if (userToLog) {
                 let samePassword = bcrypt.compareSync(req.body.password, userToLog.password);
                 if (samePassword) {
-                    //delete userToLog.password;
-                    //req.session.userLogueado = userToLog;
-                    res.redirect("/");
+                    //delete userToLog.password; 
+                    req.session.userLogged = userToLog;
+                    res.redirect("/user");
                 } else {
                     res.render("login", {
                         errors: {
@@ -66,6 +70,10 @@ const userController = {
                 });
             }
         }
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect("/");
     }
 }
 

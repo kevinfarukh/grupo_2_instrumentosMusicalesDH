@@ -1,13 +1,23 @@
 // modulos express y path
 
 const express = require("express");
+const session = require("express-session")
 const path = require("path");
 const methodOverride =  require('method-override');
+const cookies = require("cookie-parser")
 
 const app = express();
 
-//carpeta estatica public y ejs
+const menuLoginProfile = require("./middlewares/menuLoginProfile");
 
+//carpeta estatica public y ejs
+app.use(session({
+    secret: "shh",
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(cookies())
+app.use(menuLoginProfile)
 app.use(express.static(path.resolve(__dirname,"../public")));
 app.set('views', path.join(__dirname, '/views'));
 app.set("view engine","ejs")

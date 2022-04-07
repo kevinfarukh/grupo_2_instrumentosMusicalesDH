@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Head-->
+<head>
+    <%- include("../partials/head") %>
+    <title>Detalles del producto</title>
+</head>
+<body class="body-product">
+    <!--Header-->
+    <%- include("../partials/header") %>
+    
+    <section class="userName">
+        <h1>Hola <%= user.userName %></h1>
+        <img src="/images/users/<%=user.img%>" alt="">
+        <div class="btn-logout">
+            <a href="/user/logout">Logout</a>
+        </div>
+    </section>
+
+    <%- include("../partials/footer") %>
+
+        
+    
+</body>
+</html>

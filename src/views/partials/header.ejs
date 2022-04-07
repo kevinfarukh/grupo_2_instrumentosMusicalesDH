@@ -15,9 +15,16 @@
         </div>
         <div class="login-menu">
             <ul class="login-menu_list">
-                <li><a class="register-link" href="/user/login">Ingresar</a></li>
-                <li><a class="register-link" href="/register"> Registrarse</a></li>
-                <li><i class="far fa-user"></i></li>
+                <% if(locals.isLogged){ %>
+                    <li><a class="register-link profile-link" href="/user">
+                        <img src="/images/users/<%=locals.userLogged.img%>" alt="">
+                        <span> Hola <%= locals.userLogged.userName %></span>
+                    </a></li>
+                <%}else{%>
+                    <li><a class="register-link" href="/user/login">Ingresar</a></li>
+                    <li><a class="register-link" href="/user/create"> Registrarse</a></li>
+                <%}%>
+                
             </ul>
         </div>
         <div class="basket">

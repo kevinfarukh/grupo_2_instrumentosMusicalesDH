@@ -23,9 +23,14 @@
         <% if(locals.errors && errors.password){ %>
             <p style="color:aqua"><%=errors.password.msg%></p>
         <% } %>
+        <label for="login"> 
+            <input type="checkbox" name="login" id="login">
+            Recordar mi usuario
+        </label>
+        
         <input class=" boton-enviarlogin" type="submit" >
         <input class=" boton-enviarlogin" type="reset">
-        <a class="olvide-login" href="pruebaHola.html" target="_blank">Olvide mi contraseña</a>
+        
         <input class="boton-enviarlogin" type="button" value="Crear cuenta">     
 
     </form>
