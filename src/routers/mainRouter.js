@@ -16,6 +16,10 @@ let storage = multer.diskStorage({
 })
 let upload = multer({ storage })
 
+//Middleware de validacion de carga
+
+const validation = require("../middlewares/itemsValidator");
+
 
  // enrutamiento *************
 
@@ -34,7 +38,7 @@ router.get("/login", mainController.login);
 router.get("/create",mainController.cargaGet);
 
 
-router.post("/product-detail",upload.single("img"), mainController.addDetails);
+router.post("/product-detail",upload.single("img"), validation.createValidation ,mainController.addDetails);
 
 router.get("/product-detail/:id/edit", mainController.edit)
 router.put("/product-detail/:id", mainController.update)

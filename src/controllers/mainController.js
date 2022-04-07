@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require("path")
 
+const {validationResult} = require('express-validator');
+
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -43,7 +45,16 @@ const mainController = {
     },
     addDetails: (req,res)=>{
     
-        let newProduct = {
+        //Constante con los errores
+        const result = validationResult(req);
+
+        if(result.errors.length > 0)
+        {
+            res.render("formularioDeCarga",
+            {errors: result.mapped(),
+            oldData: req.body});
+        }
+        /*let newProduct = {
             id: Date.now(),
             productName: req.body.productName,
             price: req.body.price,
@@ -56,7 +67,7 @@ const mainController = {
 
         let productsJSON=JSON.stringify(products);
 
-		fs.writeFileSync(productsFilePath, productsJSON);
+		fs.writeFileSync(productsFilePath, productsJSON);*/
 		
 		res.redirect('/')
     },

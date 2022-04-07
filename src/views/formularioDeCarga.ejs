@@ -12,23 +12,47 @@
         <form action="/product-detail" method="POST" enctype="multipart/form-data">
             <label for="name">
                 Nombre del producto
-                <input type="text" id="name" name="productName">
+                <input type="text" id="name" name="productName" 
+                value="<%= locals.oldData ? oldData.productName : null %>">
+                <% if (locals.errors && errors.productName){ %>
+                <div class="text-danger">
+                    <%= errors.productName.msg %>
+                </div>
+                <% } %>
             </label>
+
             <label for="">
                 Descripción
                 <textarea name="description"></textarea>
+                <% if (locals.errors && errors.description){ %>
+                    <div class="text-danger">
+                        <%= errors.description.msg %>
+                    </div>
+                    <% } %>
             </label>
             <label for="">
-                Caracteristicas
+                Características
                 <textarea name="characteristics"></textarea>
+                <% if (locals.errors && errors.characteristics){ %>
+                    <div class="text-danger">
+                        <%= errors.characteristics.msg %>
+                    </div>
+                    <% } %>
             </label>
             <label for="">
                 Precio
-                <input name="price" type="number">
+                <input name="price" type="number"
+                value="<%= locals.oldData ? oldData.price : null %>">
+                <% if (locals.errors && errors.price){ %>
+                    <div class="text-danger">
+                        <%= errors.price.msg %>
+                    </div>
+                    <% } %>
             </label>
             <label for="">
                 Descuento
-                <input name="discount" type="number">
+                <input name="discount" type="number"
+                value="<%= locals.oldData ? oldData.discount : null %>">
             </label>
             <label for="">
                 Categoria
@@ -39,6 +63,11 @@
                     <option value="cuerdas-frotadas">Cuerdas Frotadas</option>
                     <option value="microfonos">Microfonos</option>
                 </select>
+                <% if (locals.errors && errors.category){ %>
+                    <div class="text-danger">
+                        <%= errors.category.msg %>
+                    </div>
+                    <% } %>
             </label>
             <label for="">
                 Imagen
