@@ -1291,15 +1291,16 @@ p.relleno-descripcion.opcion-descripcion {
 /*User-profile-----------------------------------------*/
 
 .userName{
-  width: 400px;
-  height: 400px;
-  margin: 150px auto;
+  width: 200px;
+  height: 200px;
+  margin: 200px auto;
+  border-radius: 40px;
 
   padding: 30px;
   background-color: var(--bg-color);
 }
 .userName img{
-  width: 200px;
+  width: 60%;
   display: block;
   margin: 10px auto;
 }
@@ -1313,10 +1314,25 @@ p.relleno-descripcion.opcion-descripcion {
 }
 .btn-logout{
   margin: auto;
-  padding: 20px;
   background-color: #1f53c5;
   border: 1px solid black;
-  height: 40px;
-  width: 100px;
+  height: 20px;
+  width: 50px;
 
+}
+@media (min-width: 500px) {
+  .userName{
+    width: 400px;
+    height: 400px;
+    margin: 200px auto;
+    border-radius: 40px;
+  
+    padding: 30px;
+    background-color: var(--bg-color);
+  }
+  .btn-logout{
+    height: 40px;
+    width: 100px;
+    padding: 10px 20px;
+  }
 }

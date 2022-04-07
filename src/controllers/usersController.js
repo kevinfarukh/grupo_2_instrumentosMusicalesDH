@@ -12,7 +12,6 @@ const userController = {
         })
     },
     create:(req,res)=>{
-        res.cookie("userLogged", "hola", {maxAge: 1000 * 30})
         res.render("users/formularioCrearUsuario")
     },
     createPost:(req,res)=>{
@@ -35,7 +34,7 @@ const userController = {
     },
     login: (req, res) => {
         res.render("login")
-        console.log(req.cookies.userLogged)
+        
     },
     loginProcess: (req, res) => {
         const results = validationResult(req);
@@ -50,6 +49,11 @@ const userController = {
                 if (samePassword) {
                     //delete userToLog.password; 
                     req.session.userLogged = userToLog;
+                    
+                    if(req.body.recordarme){
+                        res.cookie("userEmail", req.body.email, {maxAge: 1000 * 30})
+                    }
+                    
                     res.redirect("/user");
                 } else {
                     res.render("login", {
@@ -72,6 +76,7 @@ const userController = {
         }
     },
     logout: (req, res) => {
+        res.clearCookie("userEmail");
         req.session.destroy();
         res.redirect("/");
     }
