@@ -8,13 +8,13 @@ const validation = {
         body("price").notEmpty().withMessage("Debe agregar el precio del producto").bail()
         .isInt().withMessage("Debe ingresar valores numéricos"),
         body("category").notEmpty().withMessage("Debe escoger una categoría"),
-        /*body("img").custom((value, {req}) => 
+        body("img").custom((value, {req}) => 
             {
                 let file = req.file;
                 if(!file){
                     throw new Error("Debe escoger una imagen");
                 }
-            })*/
+            })
     ]
 }
 

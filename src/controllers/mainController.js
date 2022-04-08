@@ -54,22 +54,25 @@ const mainController = {
             {errors: result.mapped(),
             oldData: req.body});
         }
-        /*let newProduct = {
-            id: Date.now(),
-            productName: req.body.productName,
-            price: req.body.price,
-            description: req.body.description,
-            characteristics: req.body.characteristics,
-            discount: req.body.discount,
-            img: req.file.filename
+        else{
+            let newProduct = {
+                id: Date.now(),
+                productName: req.body.productName,
+                price: req.body.price,
+                description: req.body.description,
+                characteristics: req.body.characteristics,
+                discount: req.body.discount,
+                img: req.file.filename
+            }
+            products.unshift(newProduct)
+    
+            let productsJSON=JSON.stringify(products);
+    
+            fs.writeFileSync(productsFilePath, productsJSON);
+            
+            res.redirect('/');
         }
-        products.unshift(newProduct)
-
-        let productsJSON=JSON.stringify(products);
-
-		fs.writeFileSync(productsFilePath, productsJSON);*/
-		
-		res.redirect('/')
+        
     },
     edit:(req,res)=>{
         let id = req.params.id

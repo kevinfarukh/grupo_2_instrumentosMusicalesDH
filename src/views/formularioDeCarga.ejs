@@ -23,7 +23,7 @@
 
             <label for="">
                 Descripción
-                <textarea name="description"></textarea>
+                <textarea name="description"><%= locals.oldData ? oldData.description : null %></textarea>
                 <% if (locals.errors && errors.description){ %>
                     <div class="text-danger">
                         <%= errors.description.msg %>
@@ -32,7 +32,7 @@
             </label>
             <label for="">
                 Características
-                <textarea name="characteristics"></textarea>
+                <textarea name="characteristics"><%= locals.oldData ? oldData.characteristics : null %></textarea>
                 <% if (locals.errors && errors.characteristics){ %>
                     <div class="text-danger">
                         <%= errors.characteristics.msg %>
@@ -72,10 +72,16 @@
             <label for="">
                 Imagen
             <input name="img" type="file">
+            <% if (locals.errors && errors.img){ %>
+            <div class="text-danger">
+                <p><%= errors.img.msg %></p>
+            </div>
+            <% } %>
             </label>
             <div class="btn-enviar-carga">
                 <input type="submit" name="Enviar" id="">
             </div>
+            
         </form>
     </div>
 </body>
