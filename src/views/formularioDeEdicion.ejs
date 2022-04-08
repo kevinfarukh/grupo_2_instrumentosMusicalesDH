@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include("partials/head") %>
-    <title>Document</title>
+    <title>Editar producto</title>
 </head>
 <body class="body-home">
     <%- include("partials/header") %>
@@ -14,9 +14,9 @@
                 Nombre del producto
                 <input type="text" id="name" value="<%=product.productName%>" name="productName">
             </label>
-            <label for="">
+            <label for="description">
                 Descripción
-                <textarea name="description"><%=product.description%></textarea>
+                <textarea name="description" id="description"><%=product.description%></textarea>
             </label>
             <label for="">
                 Caracteristicas
@@ -41,7 +41,7 @@
                 </select>
             </label>
             <div class="btn-enviar-carga">
-                <input type="submit" name="Enviar" id="">
+                <input type="submit" name="Enviar" id="" value="Editar">
             </div>
         </form>
     </div>

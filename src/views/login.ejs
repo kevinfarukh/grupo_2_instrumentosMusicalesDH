@@ -3,7 +3,7 @@
 <!--Head-->
 <head>
     <%- include("partials/head") %>
-    <title>INGRESAR</title>
+    <title>Ingresar</title>
     
 </head>
 <body class="body-login">
@@ -16,12 +16,12 @@
         <label for="usuario">Correo:</label>
         <input class="relleno-login" type="email" name="email" id="usuario" placeholder="Ingrese su email">
         <% if(locals.errors && errors.email){ %>
-            <p style="color:aqua"><%=errors.email.msg%></p>
+            <p class="text-danger"><%=errors.email.msg%></p>
         <% } %>
         <label for="contraseña">Contraseña:</label>
         <input class="relleno-login" type="password" name="password" id="contraseña" placeholder="Ingrese su contraseña">
         <% if(locals.errors && errors.password){ %>
-            <p style="color:aqua"><%=errors.password.msg%></p>
+            <p class="text-danger""><%=errors.password.msg%></p>
         <% } %>
         <label for="recordarme"> 
             <input type="checkbox" name="recordarme" id="recordarme">
