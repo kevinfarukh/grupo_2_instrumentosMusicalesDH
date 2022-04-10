@@ -1,5 +1,6 @@
 const { body } = require("express-validator");
 const path = require("path");
+const fs = require("fs");
 
 
 const validation = {
@@ -13,7 +14,12 @@ const validation = {
         body("img").custom((value, {req}) => 
             {
                 let file = req.file;
-                let formats = [ ".jpeg", ".jpg", ".svg", ".gif"]
+                let formats = [".png", ".jpeg", ".jpg", ".svg", ".gif"]
+
+                function deleteImg(filePath)
+                {
+                    fs.unlinkSync(filePath);
+                }
 
                 if(!file){
                     throw new Error("Debe escoger una imagen");
@@ -23,6 +29,8 @@ const validation = {
 
                 if(!formats.includes(fileExtension))
                 {
+                    //Función para eliminar la imagen si se crea con el formato incorrecto
+                    deleteImg(path.join(__dirname, "../../public/images", file.filename));
                     throw new Error("Debe escoger un archivo de tipo: [" + formats.join(' ') + "]");
                 }
 
