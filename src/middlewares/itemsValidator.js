@@ -1,4 +1,6 @@
 const { body } = require("express-validator");
+const path = require("path");
+
 
 const validation = {
     createValidation: [
@@ -11,9 +13,20 @@ const validation = {
         body("img").custom((value, {req}) => 
             {
                 let file = req.file;
+                let formats = [ ".jpeg", ".jpg", ".svg", ".gif"]
+
                 if(!file){
                     throw new Error("Debe escoger una imagen");
                 }
+
+                let fileExtension = path.extname(file.originalname);
+
+                if(!formats.includes(fileExtension))
+                {
+                    throw new Error("Debe escoger un archivo de tipo: [" + formats.join(' ') + "]");
+                }
+
+                return true;
             })
     ]
 }
