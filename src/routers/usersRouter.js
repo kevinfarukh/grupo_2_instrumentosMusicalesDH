@@ -18,12 +18,13 @@ const upload = multer({ storage })
 const validation = require("../middlewares/validator");
 const usuarioLogueado = require("../middlewares/usuarioLogueado");
 const usuarioNoLogueado = require("../middlewares/usuarioNoLogueado");
+const signupValidator = require("../middlewares/signupValidator");
 //profile
 router.get("/", usuarioNoLogueado,userController.index)
 
 //creación de usuario
 router.get("/create",usuarioLogueado, userController.create);
-router.post("/create",upload.single("img"),userController.createPost);
+router.post("/create",upload.single("img"), signupValidator,userController.createPost);
 
 //login
 router.get("/login", usuarioLogueado, userController.login)

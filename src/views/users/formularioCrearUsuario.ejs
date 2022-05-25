@@ -14,14 +14,23 @@
                 Usuario
                 <input type="text" id="name" name="userName">
             </label>
+            <% if(locals.errors && errors.userName){%>
+                <p class="text-danger-sign"><%= errors.userName.msg %></p>
+            <%}%>
             <label for="email">
                 Email
                 <input type="email" id="email" name="email">
             </label>
+            <% if(locals.errors && errors.email){%>
+                <p class="text-danger-sign"><%= errors.email.msg %></p>
+            <%}%>
             <label for="password">
                 Contraseña
                 <input type="password" id="password" name="password">
             </label>
+            <% if(locals.errors && errors.password){%>
+                <p class="text-danger-sign"><%= errors.password.msg %></p>
+            <%}%>
             <label for="">
                 Imagen
             <input name="img" type="file">

@@ -4,6 +4,13 @@ const bcrypt = require("bcryptjs")
 const usersFilePath = path.join(__dirname, '../data/usersData.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require("express-validator");
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+//Models
+
+const User = db.User;
 
 const userController = {
     index:(req, res) =>{
@@ -16,21 +23,28 @@ const userController = {
     },
     createPost:(req,res)=>{
         //info
-        let newUser = {
-            id: Date.now(),
-            userName: req.body.userName,
-            email: req.body.email,
-            password: bcrypt.hashSync (req.body.password, 10),
-            img: req.file.filename
-        };
-        users.push(newUser)
-
-        let userJSON=JSON.stringify(users);
-
-		fs.writeFileSync(usersFilePath, userJSON);
-		
-        //redirigir
-        res.redirect("/")
+        let errorsValidator = validationResult(req);
+        let oldData = req.body;
+        if(errorsValidator.errors.length > 0){
+            res.render("users/formularioCrearUsuario", {
+                errors: errorsValidator.mapped(),
+                oldData: oldData
+            });
+            console.log(errorsValidator.mapped())
+        } else {
+            User.create({
+                name: req.body.userName,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                img: req.file ? req.file.filename : 'default.jpg'
+            })
+            .then(user=>{
+                res.redirect('/')
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+        }
     },
     login: (req, res) => {
         res.render("login")

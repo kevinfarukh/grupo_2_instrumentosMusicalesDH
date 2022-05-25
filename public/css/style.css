@@ -18,6 +18,10 @@
 .text-danger {
   color: red;
 }
+.text-danger-sign{
+  color: red;
+  padding: 0 20px;
+}
 
 .separator {
   border: solid var(--logo-color) 1px;
